@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9399770e1e23be040b929a2919416164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogma_noktasi: {fileID: 8566247908233925679, guid: 64f66a3e5c5ebb24893cce1458e62e56, type: 3}
+  dogma_noktasi: {fileID: 8566247908233925679, guid: 64f66a3e5c5ebb24893cce1458e62e56,
+    type: 3}
   Enemy_1: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
   Enemy_2: {fileID: 1774625739149480, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
   Enemy_3: {fileID: 0}
@@ -102,3 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86c131f542012e4aa09d374dc16f36a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  silah_Zemin: {fileID: 8817926664490517628, guid: f0705502d7238674eab96dde006a20df,
+    type: 3}
+  turret_1: {fileID: 1401014823036408, guid: 639c49a7820a549c5822f7b768abc5ac, type: 3}
+  turret_2: {fileID: 1361402013487122, guid: afd8cfe3809484aac81a3f4f39b80ca5, type: 3}
+  turret_3: {fileID: 1161251386251526, guid: 6f6de38bc4946428ab2a1d468039753e, type: 3}
+  islem_yapilacak_silah: {fileID: 0}
+  olusacak_silah_kordinat: {fileID: 0}
