@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5783871633719776685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429617760518068144}
+  - component: {fileID: 7656923195983902916}
+  - component: {fileID: 6452390797327801492}
+  m_Layer: 0
+  m_Name: Game_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429617760518068144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783871633719776685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.958916, y: -3.3114662, z: 11.967952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7656923195983902916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783871633719776685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9399770e1e23be040b929a2919416164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogma_noktasi: {fileID: 8566247908233925679, guid: 64f66a3e5c5ebb24893cce1458e62e56, type: 3}
+  Enemy_1: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
+  Enemy_2: {fileID: 1774625739149480, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+  Enemy_3: {fileID: 0}
+  Enemy_4: {fileID: 0}
+  Enemy_5: {fileID: 0}
+  Enemy_6: {fileID: 0}
+  Enemy_7: {fileID: 0}
+  Enemy_8: {fileID: 0}
+  Enemy_9: {fileID: 0}
+  Enemy_1_path: 0
+  Enemy_2_path: 0
+  Enemy_3_path: 0
+  Enemy_4_path: 0
+  Enemy_5_path: 0
+  Enemy_6_path: 0
+  Enemy_7_path: 0
+  Enemy_8_path: 0
+  Enemy_9_path: 0
+  Enemy_1_dogum_sayisi: 1
+  Enemy_2_dogum_sayisi: 5
+  Enemy_3_dogum_sayisi: 0
+  Enemy_4_dogum_sayisi: 0
+  Enemy_5_dogum_sayisi: 0
+  Enemy_6_dogum_sayisi: 0
+  Enemy_7_dogum_sayisi: 0
+  Enemy_8_dogum_sayisi: 0
+  Enemy_9_dogum_sayisi: 0
+  Enemy_1_dogum_sure: 4
+  Enemy_2_dogum_sure: 3
+  Enemy_3_dogum_sure: 0
+  Enemy_4_dogum_sure: 0
+  Enemy_5_dogum_sure: 0
+  Enemy_6_dogum_sure: 0
+  Enemy_7_dogum_sure: 0
+  Enemy_8_dogum_sure: 0
+  Enemy_9_dogum_sure: 0
+  Enemy_1_yol: 1
+  Enemy_2_yol: 2
+  Enemy_3_yol: 0
+  Enemy_4_yol: 0
+  Enemy_5_yol: 0
+  Enemy_6_yol: 0
+  Enemy_7_yol: 0
+  Enemy_8_yol: 0
+  Enemy_9_yol: 0
+--- !u!114 &6452390797327801492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783871633719776685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86c131f542012e4aa09d374dc16f36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
