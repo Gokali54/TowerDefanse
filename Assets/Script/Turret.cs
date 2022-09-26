@@ -23,7 +23,7 @@ public class Turret : MonoBehaviour
 
 
 
-
+    // gokhan deðiþiklik yaptý
 
     public void ilk_temas(Collider other)
     {
