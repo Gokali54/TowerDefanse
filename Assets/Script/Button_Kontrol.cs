@@ -27,9 +27,9 @@ public class Button_Kontrol : MonoBehaviour
         tümradarlar = GameObject.FindGameObjectsWithTag("radar");
         foreach (var item in tümradarlar)
         {
-            Debug.Log(tümradarlar.Length);
-            //item.GetComponent<MeshRenderer>().enabled = false;
-            item.SetActive(false);
+           
+            item.GetComponent<MeshRenderer>().enabled = false;
+            
         }
 
 
@@ -46,7 +46,7 @@ public class Button_Kontrol : MonoBehaviour
         tümradarlar = GameObject.FindGameObjectsWithTag("radar");
         foreach (var item in tümradarlar)
         {
-            //item.GetComponent<MeshRenderer>().enabled = false;
+            item.GetComponent<MeshRenderer>().enabled = false;
         }
 
     }
@@ -60,7 +60,7 @@ public class Button_Kontrol : MonoBehaviour
         tümradarlar = GameObject.FindGameObjectsWithTag("radar");
         foreach (var item in tümradarlar)
         {
-          //  item.GetComponent<MeshRenderer>().enabled = false;
+          item.GetComponent<MeshRenderer>().enabled = false;
 
         }
 
@@ -75,7 +75,7 @@ public class Button_Kontrol : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log("bton kontrol");
+      
     }
 
     void Update()

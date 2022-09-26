@@ -28,10 +28,7 @@ public class radar_cember : MonoBehaviour
         }
     }
 
-    public void OnMouseDown()
-    {
-        Debug.Log("asfdadsf");
-    }
+  
 
     // Update is called once per frame
     void Update()

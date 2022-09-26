@@ -55,18 +55,16 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     private void OnMouseDown()
     {
-        Debug.Log("turret sadf");
+        Debug.Log("onclik");
         GameObject[] tümradarlar;
         tümradarlar = GameObject.FindGameObjectsWithTag("radar");
         foreach (var item in tümradarlar)
         {
-            item.SetActive(false);
-            Debug.Log("kapat"); 
+            
+            item.GetComponent<MeshRenderer>().enabled = false;
+            
         }
-
-
-        radar.SetActive(true);
-        Debug.Log("aç");
+        radar.GetComponent<MeshRenderer>().enabled = true;
     }
 
     void Update()
