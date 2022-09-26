@@ -22,6 +22,9 @@ public class Turret : MonoBehaviour
     Button_Kontrol button_Kontrol;
 
 
+
+    // gokhan deðiþiklik yaptý
+
     // Fevzi deðiþiklik yaptý
 
 
