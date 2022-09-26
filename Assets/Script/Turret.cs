@@ -22,7 +22,7 @@ public class Turret : MonoBehaviour
     Button_Kontrol button_Kontrol;
 
 
-
+    // Fevzi deðiþiklik yaptý
 
 
     public void ilk_temas(Collider other)
