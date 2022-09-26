@@ -23,6 +23,15 @@ public class Button_Kontrol : MonoBehaviour
         olusacak_silah_kordinat = null;
         btn_canvas.SetActive(false);
 
+        GameObject[] tümradarlar;
+        tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+        foreach (var item in tümradarlar)
+        {
+            item.SetActive(false);
+
+        }
+
+
     }
 
     public void turret_2_add()
@@ -30,6 +39,13 @@ public class Button_Kontrol : MonoBehaviour
         GameObject yeni_turret = Instantiate(turret_2, olusacak_silah_kordinat.position, Quaternion.identity);
         olusacak_silah_kordinat = null;
         btn_canvas.SetActive(false);
+        GameObject[] tümradarlar;
+        tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+        foreach (var item in tümradarlar)
+        {
+            item.SetActive(false);
+
+        }
 
     }
 
@@ -38,6 +54,13 @@ public class Button_Kontrol : MonoBehaviour
         GameObject yeni_turret = Instantiate(turret_3, olusacak_silah_kordinat.position, Quaternion.identity);
         olusacak_silah_kordinat = null;
         btn_canvas.SetActive(false);
+        GameObject[] tümradarlar;
+        tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+        foreach (var item in tümradarlar)
+        {
+            item.SetActive(false);
+
+        }
 
     }
 

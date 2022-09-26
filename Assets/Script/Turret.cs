@@ -5,6 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     public GameObject silahin_kafasi;
+    public GameObject radar;
 
     void Start()
     {
@@ -12,6 +13,18 @@ public class Turret : MonoBehaviour
     }
 
     // Update is called once per frame
+    private void OnMouseDown()
+    {
+        GameObject[] tümradarlar;
+        tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+        foreach (var item in tümradarlar)
+        {
+            item.SetActive(false);
+         
+        }
+        radar.SetActive(true);
+    }
+
     void Update()
     {
         silahin_kafasi.transform.Rotate(0, 1, 0);

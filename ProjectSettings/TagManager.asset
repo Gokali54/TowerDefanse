@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - takip_edilen_kup_2
+  - takip_edilen_kup_1
+  - varis_noktasi
+  - radar
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ public class Silah_Zemin : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Debug.Log(button_canvas.activeSelf);
+      
         if (button_canvas.activeSelf == true)
         {            
             button_kontrol.olusacak_silah_kordinat = gameObject.transform;
