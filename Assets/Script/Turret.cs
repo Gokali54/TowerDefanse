@@ -25,6 +25,9 @@ public class Turret : MonoBehaviour
 
     // gokhan deðiþiklik yaptý
 
+    // Fevzi deðiþiklik yaptý
+
+
     public void ilk_temas(Collider other)
     {
         hedef.Add(other.gameObject.transform);
