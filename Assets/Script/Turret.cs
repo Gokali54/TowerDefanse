@@ -23,6 +23,9 @@ public class Turret : MonoBehaviour
 
 
 
+    //devolop'a ek olarak yeni güncelleme
+
+
     // gokhan deðiþiklik yaptý
 
     // Fevzi deðiþiklik yaptý
