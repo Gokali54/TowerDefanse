@@ -6,8 +6,8 @@ public class Game_Manager : MonoBehaviour
 {
     public Transform dogma_noktasi; 
     public GameObject Enemy_1, Enemy_2, Enemy_3, Enemy_4, Enemy_5, Enemy_6, Enemy_7, Enemy_8, Enemy_9;
-    public int Enemy_1_path, Enemy_2_path, Enemy_3_path, Enemy_4_path, Enemy_5_path,
-        Enemy_6_path, Enemy_7_path, Enemy_8_path, Enemy_9_path;
+  //  public int Enemy_1_path, Enemy_2_path, Enemy_3_path, Enemy_4_path, Enemy_5_path,
+    //    Enemy_6_path, Enemy_7_path, Enemy_8_path, Enemy_9_path;
     public int Enemy_1_dogum_sayisi, Enemy_2_dogum_sayisi, Enemy_3_dogum_sayisi, Enemy_4_dogum_sayisi, Enemy_5_dogum_sayisi
         , Enemy_6_dogum_sayisi, Enemy_7_dogum_sayisi, Enemy_8_dogum_sayisi, Enemy_9_dogum_sayisi;
     public int Enemy_1_dogum_sure, Enemy_2_dogum_sure, Enemy_3_dogum_sure, Enemy_4_dogum_sure, Enemy_5_dogum_sure

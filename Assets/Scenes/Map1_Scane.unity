@@ -2252,12 +2252,22 @@ PrefabInstance:
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
       propertyPath: Enemy_2_yol
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_1_dogum_sure
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_1_dogum_sayisi
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
       propertyPath: Enemy_2_dogum_sayisi
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3, type: 3}

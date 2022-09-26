@@ -8,6 +8,7 @@ TagManager:
   - takip_edilen_kup_1
   - varis_noktasi
   - radar
+  - Enemy
   layers:
   - Default
   - TransparentFX

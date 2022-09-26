@@ -34,6 +34,8 @@ public class Button_Kontrol : MonoBehaviour
 
     }
 
+
+
     public void turret_2_add()
     {
         GameObject yeni_turret = Instantiate(turret_2, olusacak_silah_kordinat.position, Quaternion.identity);
