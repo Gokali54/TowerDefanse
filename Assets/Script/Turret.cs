@@ -23,14 +23,6 @@ public class Turret : MonoBehaviour
 
 
 
-    //devolop'a ek olarak yeni güncelleme
-
-
-    // gokhan deðiþiklik yaptý
-
-    // Fevzi deðiþiklik yaptý
-
-
     public void ilk_temas(Collider other)
     {
         hedef.Add(other.gameObject.transform);
@@ -63,14 +55,18 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     private void OnMouseDown()
     {
+        Debug.Log("turret sadf");
         GameObject[] tümradarlar;
         tümradarlar = GameObject.FindGameObjectsWithTag("radar");
         foreach (var item in tümradarlar)
         {
-            item.GetComponent<MeshRenderer>().enabled = false;
-         
+            item.SetActive(false);
+            Debug.Log("kapat"); 
         }
-        radar.GetComponent<MeshRenderer>().enabled = true;
+
+
+        radar.SetActive(true);
+        Debug.Log("aç");
     }
 
     void Update()

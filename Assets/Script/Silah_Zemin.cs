@@ -20,6 +20,7 @@ public class Silah_Zemin : MonoBehaviour
 
     public void OnMouseDown()
     {
+        Debug.Log("Silah_zemin");
       
         if (button_canvas.activeSelf == true)
         {            
