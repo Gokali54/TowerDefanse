@@ -15,7 +15,7 @@ public class radar_cember : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             GetComponentInParent<Turret>().ilk_temas(other);
-            Debug.Log("tamam");
+          
         }
     }
 
@@ -23,11 +23,12 @@ public class radar_cember : MonoBehaviour
     {
         if (other.gameObject.tag =="Enemy")
         {
-            Debug.Log("ok");
+           
             GetComponentInParent<Turret>().ilk_temassizlik(other);
         }
     }
 
+  
 
     // Update is called once per frame
     void Update()
