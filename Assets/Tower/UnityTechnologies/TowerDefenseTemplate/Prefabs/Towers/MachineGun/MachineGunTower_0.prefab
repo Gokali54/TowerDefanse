@@ -43564,15 +43564,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228021e3417c4b7449ff1ddecabd5dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  silahin_kafasi: {fileID: 1589316105556366}
+  silahin_kafasi: {fileID: 4877050138446582}
+  namlu: {fileID: 4457715277627928}
   radar: {fileID: 4397403395827320519}
-  namlu: {fileID: 1860257489135870}
-  kursun: {fileID: 0}
+  kursun: {fileID: 1000011023395326, guid: 2ce15a1900ef14a459f78260cd05a3dc, type: 3}
+  alev_effect: {fileID: 198895463405124220}
   hedef: []
   suanki_hedef: {fileID: 0}
-  radar_transfor: {fileID: 0}
+  "ates_etme_arali\u011Fi": 0.5
+  kursun_hiz: 150
+  gelecek_atesi_suresi: 0
   silahin_leveli: 0
-  "ates_etme_arali\u011Fi": 0
   gelisim_maliyeti: 0
   yikim_geliri: 0
 --- !u!1001 &8397947523420681035
