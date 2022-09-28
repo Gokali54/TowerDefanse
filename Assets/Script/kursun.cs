@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class kursun : MonoBehaviour
 {
+    public float damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class kursun : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Debug.Log("düþmana çarptý");
+           // Debug.Log("düþmana çarptý");
         }
     }
 

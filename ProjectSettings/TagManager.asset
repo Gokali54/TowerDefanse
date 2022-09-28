@@ -9,6 +9,7 @@ TagManager:
   - varis_noktasi
   - radar
   - Enemy
+  - kursun
   layers:
   - Default
   - TransparentFX

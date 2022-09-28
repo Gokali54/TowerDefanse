@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         game_manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
-
+        simdiki_can = can;
         if (gameObject.name == game_manager.Enemy_1.name + "(Clone)")
         {
             takip_edilen_kup_no = game_manager.Enemy_1_yol;
@@ -48,6 +48,17 @@ public class Enemy : MonoBehaviour
         }
         kamera = GameObject.Find("Main Camera");
       
+    }
+
+    void can_azalt(float gelen_hasar)
+    {
+        simdiki_can = simdiki_can - gelen_hasar;
+        can_bar.fillAmount = Mathf.Lerp(can_bar.fillAmount, can / simdiki_can, Time.deltaTime * 2);
+        
+        if (simdiki_can < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
@@ -72,6 +83,7 @@ public class Enemy : MonoBehaviour
     {
         GetComponent<Rigidbody>().velocity = transform.forward * hiz * Time.deltaTime;
         canvas.transform.LookAt(kamera.transform);
+      
     }
 
     private void OnTriggerEnter(Collider other)
@@ -90,6 +102,12 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "varis_noktasi")
         {
             Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "kursun")
+        {
+            Debug.Log("enemy _ kursun");
+            can_azalt(other.gameObject.GetComponent<kursun>().damage);
         }
 
     }

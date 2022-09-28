@@ -9,18 +9,28 @@ public class Turret : MonoBehaviour
     public GameObject radar;
     public GameObject kursun;
     public ParticleSystem alev_effect;
-    public List<Transform> hedef;
-    public  Transform suanki_hedef;
+    public GameObject canvas;
+    public float kursun_damage;
     public float ates_etme_araliði,kursun_hiz;
-    public float gelecek_atesi_suresi=0;
-    bool ates = false;
 
     public int silahin_leveli;
     public int gelisim_maliyeti;
     public int yikim_geliri;
+    
+
+
+    bool ates = false;
+    float gelecek_atesi_suresi=0;
+    public List<Transform> hedef;
+    public  Transform suanki_hedef;
+    GameObject kamera;
+
+
+
 
     Button_Kontrol button_Kontrol;
 
+    float radar_kapatma_sayac = 5;
 
 
     public void ilk_temas(Collider other)
@@ -53,6 +63,8 @@ public class Turret : MonoBehaviour
 
     void Start()
     {
+        kamera = GameObject.Find("Main Camera");
+        kursun.GetComponent<kursun>().damage = kursun_damage;
         hedef = new List<Transform>();
         button_Kontrol = GameObject.Find("Game_Manager").GetComponent<Button_Kontrol>();
     }
@@ -61,15 +73,49 @@ public class Turret : MonoBehaviour
     private void OnMouseDown()
     {
         
+    
+
+        if (radar.GetComponent<MeshRenderer>().enabled == true)
+        {
+
+            radar.GetComponent<MeshRenderer>().enabled = false;
+            GameObject[] tümradarlar;
+            tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+            foreach (var item in tümradarlar)
+            {
+
+                item.GetComponent<MeshRenderer>().enabled = false;
+
+            }
+        }
+        else
+        {
+            radar_kapatma_sayac = 5;
+            GameObject[] tümradarlar;
+            tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+            foreach (var item in tümradarlar)
+            {
+
+                item.GetComponent<MeshRenderer>().enabled = false;
+
+            }
+            radar.GetComponent<MeshRenderer>().enabled = true;
+        }
+    }
+
+
+    public void tum_radar_kapat()
+    {
         GameObject[] tümradarlar;
         tümradarlar = GameObject.FindGameObjectsWithTag("radar");
         foreach (var item in tümradarlar)
         {
-            
+
             item.GetComponent<MeshRenderer>().enabled = false;
-            
+
         }
-        radar.GetComponent<MeshRenderer>().enabled = true;
+
+       
     }
 
     void Update()
@@ -97,7 +143,25 @@ public class Turret : MonoBehaviour
             }
         }
 
-        
+        if (radar.GetComponent<MeshRenderer>().enabled == true)
+        {
+            canvas.SetActive(true);
+            if (radar_kapatma_sayac>0)
+            {
+
+            radar_kapatma_sayac -= Time.deltaTime;
+            }
+            else
+            {
+             tum_radar_kapat();
+            }
+        }
+        else
+        {
+            canvas.SetActive(false);
+        }
+
+        canvas.transform.LookAt(kamera.transform);
     }
 
     public void ateset()
@@ -122,7 +186,7 @@ public class Turret : MonoBehaviour
                 ates = false;
                 if (alev_effect != null)
                 {
-                    Debug.Log("d3eðil");
+                   
                     alev_effect.Stop();
                 }
             }
