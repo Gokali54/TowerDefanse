@@ -11,16 +11,6 @@ public class kursun : MonoBehaviour
     {
         
     }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Enemy")
-        {
-           // Debug.Log("düþmana çarptý");
-        }
-    }
-
-    // Update is called once per frame
     void Update()
     {
         

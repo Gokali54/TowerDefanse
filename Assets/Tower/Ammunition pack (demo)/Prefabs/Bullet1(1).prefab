@@ -44,7 +44,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000011023395326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 44c4e7f330952134eae5e89e9caf1fa5, type: 3}
   m_Controller: {fileID: 9100000, guid: b6b052137f4ae6f45b82160f59ce9f2d, type: 2}
   m_CullingMode: 1
@@ -69,7 +69,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &8831048717329650502
 CapsuleCollider:
@@ -81,10 +81,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.20438603
-  m_Height: 0.8433844
+  m_Radius: 0.39377102
+  m_Height: 0.9769991
   m_Direction: 1
-  m_Center: {x: 0, y: 0.27039674, z: 0}
+  m_Center: {x: 0, y: 0.25110987, z: 0}
 --- !u!114 &263824127484063000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b50b82cfdf1f244c97b9804995d4ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 7
+  damage: 25
 --- !u!1 &1000011260505556
 GameObject:
   m_ObjectHideFlags: 0

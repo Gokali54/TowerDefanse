@@ -5,11 +5,18 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     public Transform silahin_kafasi, namlu;
+
+    Transform kordinatim;
     // radarý sabitten deðil silahin içine ekledikten sonra sc ye ekle 
     public GameObject radar;
     public GameObject kursun;
     public ParticleSystem alev_effect;
-    public GameObject canvas;
+   public GameObject silah_manager_canvas;
+    public GameObject ust_silah;
+    public GameObject silahin_kendisi;
+
+    Game_Manager game_Manager;
+
     public float kursun_damage;
     public float ates_etme_araliði,kursun_hiz;
 
@@ -31,6 +38,32 @@ public class Turret : MonoBehaviour
     Button_Kontrol button_Kontrol;
 
     float radar_kapatma_sayac = 5;
+
+
+    public void yukselt()
+    {
+        if (silahin_leveli >=3)
+        {
+
+        }
+        else
+        {
+            if (game_Manager.suanki_para > gelisim_maliyeti)
+            {
+
+        GameObject yeni_turret = Instantiate(ust_silah, kordinatim.position, Quaternion.identity);
+        game_Manager.para_azalt(gelisim_maliyeti);
+        Destroy(silahin_kendisi);
+            }
+        }
+    }
+
+    public void yik()
+    {
+        Debug.Log("yikim");
+        game_Manager.para_artir(yikim_geliri);
+        Destroy(silahin_kendisi);
+    }
 
 
     public void ilk_temas(Collider other)
@@ -63,6 +96,10 @@ public class Turret : MonoBehaviour
 
     void Start()
     {
+        kordinatim = gameObject.transform;
+        game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
+        //   silah_manager_canvas = GameObject.Find("Silah_Manager_Canvas");
+      //  silah_manager_canvas = GameObject.FindGameObjectWithTag("silah_manager_canvas");
         kamera = GameObject.Find("Main Camera");
         kursun.GetComponent<kursun>().damage = kursun_damage;
         hedef = new List<Transform>();
@@ -72,8 +109,15 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     private void OnMouseDown()
     {
-        
-    
+
+        GameObject soc = GameObject.FindGameObjectWithTag("silah_olustur_canvas");
+        if (soc != null)
+        {
+
+            soc.SetActive(false);
+
+
+        }
 
         if (radar.GetComponent<MeshRenderer>().enabled == true)
         {
@@ -145,10 +189,11 @@ public class Turret : MonoBehaviour
 
         if (radar.GetComponent<MeshRenderer>().enabled == true)
         {
-            canvas.SetActive(true);
+           // silah_manager_canvas.SetActive(true);
+            silah_manager_canvas.transform.GetChild(0).gameObject.SetActive(true);
+           
             if (radar_kapatma_sayac>0)
             {
-
             radar_kapatma_sayac -= Time.deltaTime;
             }
             else
@@ -158,10 +203,12 @@ public class Turret : MonoBehaviour
         }
         else
         {
-            canvas.SetActive(false);
+            silah_manager_canvas.transform.GetChild(0).gameObject.SetActive(false);
+
+           // silah_manager_canvas.SetActive(false);
         }
 
-        canvas.transform.LookAt(kamera.transform);
+       
     }
 
     public void ateset()
@@ -199,7 +246,7 @@ public class Turret : MonoBehaviour
     {
         GameObject yeni_kursun = Instantiate(kursun, namlu.position, Quaternion.identity);
         yeni_kursun.transform.LookAt(suanki_hedef);
-        yeni_kursun.GetComponent<Rigidbody>().velocity = namlu.forward * kursun_hiz;
+        yeni_kursun.GetComponent<Rigidbody>().velocity = namlu.forward * kursun_hiz ;
         Destroy(yeni_kursun, 1f);
     }
 

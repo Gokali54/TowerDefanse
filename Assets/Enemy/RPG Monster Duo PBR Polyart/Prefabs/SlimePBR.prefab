@@ -458,7 +458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hiz: 400
-  can: 0
+  can: 100
+  odul: 10
   can_bar: {fileID: 4034857292509969251}
   canvas: {fileID: 3957924846202457093}
   takip_edilen_kup_no: 0
