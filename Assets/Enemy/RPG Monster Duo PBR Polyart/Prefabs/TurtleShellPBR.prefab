@@ -857,6 +857,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hiz: 200
   can: 150
+  simdiki_can: 0
+  odul: 0
   can_bar: {fileID: 2168728622183969373}
   canvas: {fileID: 2777809783337383863}
   takip_edilen_kup_no: 0
@@ -871,7 +873,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.1296959
+  m_Radius: 0.679451
   m_Center: {x: 0, y: 0.51, z: 0}
 --- !u!1 &1822049695589022
 GameObject:

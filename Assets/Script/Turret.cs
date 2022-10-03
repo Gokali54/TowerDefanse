@@ -68,7 +68,7 @@ public class Turret : MonoBehaviour
 
     public void yik()
     {
-        Debug.Log("yikim");
+       
         game_Manager.para_artir(yikim_geliri);
         Destroy(silahin_kendisi);
     }
