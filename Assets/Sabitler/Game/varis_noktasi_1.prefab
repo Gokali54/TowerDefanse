@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6232704776279681201}
   m_Layer: 0
   m_Name: varis_noktasi_1
-  m_TagString: Untagged
+  m_TagString: varis_noktasi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

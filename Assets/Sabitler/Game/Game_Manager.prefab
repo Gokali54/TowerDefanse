@@ -46,8 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dogma_noktasi: {fileID: 8566247908233925679, guid: 64f66a3e5c5ebb24893cce1458e62e56,
     type: 3}
-  Enemy_1: {fileID: 1919012471076396, guid: 55776efecb0cd134ea5f418c2f97a705, type: 3}
-  Enemy_2: {fileID: 1774625739149480, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+  bolum_baslangic_parasi: 0
+  bolum_gececek_max_dusman: 0
+  silah_olustur_cavas: {fileID: 0}
+  silah_manager_canvas: {fileID: 0}
+  Enemy_1: {fileID: 0}
+  Enemy_2: {fileID: 0}
   Enemy_3: {fileID: 0}
   Enemy_4: {fileID: 0}
   Enemy_5: {fileID: 0}
@@ -55,17 +59,8 @@ MonoBehaviour:
   Enemy_7: {fileID: 0}
   Enemy_8: {fileID: 0}
   Enemy_9: {fileID: 0}
-  Enemy_1_path: 0
-  Enemy_2_path: 0
-  Enemy_3_path: 0
-  Enemy_4_path: 0
-  Enemy_5_path: 0
-  Enemy_6_path: 0
-  Enemy_7_path: 0
-  Enemy_8_path: 0
-  Enemy_9_path: 0
-  Enemy_1_dogum_sayisi: 1
-  Enemy_2_dogum_sayisi: 5
+  Enemy_1_dogum_sayisi: 0
+  Enemy_2_dogum_sayisi: 0
   Enemy_3_dogum_sayisi: 0
   Enemy_4_dogum_sayisi: 0
   Enemy_5_dogum_sayisi: 0
@@ -73,8 +68,8 @@ MonoBehaviour:
   Enemy_7_dogum_sayisi: 0
   Enemy_8_dogum_sayisi: 0
   Enemy_9_dogum_sayisi: 0
-  Enemy_1_dogum_sure: 4
-  Enemy_2_dogum_sure: 3
+  Enemy_1_dogum_sure: 0
+  Enemy_2_dogum_sure: 0
   Enemy_3_dogum_sure: 0
   Enemy_4_dogum_sure: 0
   Enemy_5_dogum_sure: 0
@@ -82,8 +77,8 @@ MonoBehaviour:
   Enemy_7_dogum_sure: 0
   Enemy_8_dogum_sure: 0
   Enemy_9_dogum_sure: 0
-  Enemy_1_yol: 1
-  Enemy_2_yol: 2
+  Enemy_1_yol: 0
+  Enemy_2_yol: 0
   Enemy_3_yol: 0
   Enemy_4_yol: 0
   Enemy_5_yol: 0
@@ -91,6 +86,8 @@ MonoBehaviour:
   Enemy_7_yol: 0
   Enemy_8_yol: 0
   Enemy_9_yol: 0
+  suanki_para: 0
+  gecen_dusman: 0
 --- !u!114 &6452390797327801492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,5 +105,9 @@ MonoBehaviour:
   turret_1: {fileID: 1401014823036408, guid: 639c49a7820a549c5822f7b768abc5ac, type: 3}
   turret_2: {fileID: 1361402013487122, guid: afd8cfe3809484aac81a3f4f39b80ca5, type: 3}
   turret_3: {fileID: 1161251386251526, guid: 6f6de38bc4946428ab2a1d468039753e, type: 3}
+  turret_1_para: 0
+  turret_2_para: 0
+  turret_3_para: 0
   islem_yapilacak_silah: {fileID: 0}
   olusacak_silah_kordinat: {fileID: 0}
+  btn_canvas: {fileID: 0}

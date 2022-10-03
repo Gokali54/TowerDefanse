@@ -9,6 +9,9 @@ TagManager:
   - varis_noktasi
   - radar
   - Enemy
+  - kursun
+  - silah_olustur_canvas
+  - silah_manager_canvas
   layers:
   - Default
   - TransparentFX
