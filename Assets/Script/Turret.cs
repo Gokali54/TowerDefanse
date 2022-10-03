@@ -50,10 +50,18 @@ public class Turret : MonoBehaviour
         {
             if (game_Manager.suanki_para > gelisim_maliyeti)
             {
+                GameObject[] tümradarlar;
+                tümradarlar = GameObject.FindGameObjectsWithTag("radar");
+                foreach (var item in tümradarlar)
+                {
 
-        GameObject yeni_turret = Instantiate(ust_silah, kordinatim.position, Quaternion.identity);
-        game_Manager.para_azalt(gelisim_maliyeti);
-        Destroy(silahin_kendisi);
+                    item.GetComponent<MeshRenderer>().enabled = false;
+
+                }
+
+                GameObject yeni_turret = Instantiate(ust_silah, kordinatim.position, Quaternion.identity);
+                  game_Manager.para_azalt(gelisim_maliyeti);
+                   Destroy(silahin_kendisi);
             }
         }
     }

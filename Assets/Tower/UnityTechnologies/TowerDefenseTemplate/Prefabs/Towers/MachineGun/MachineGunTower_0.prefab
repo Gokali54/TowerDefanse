@@ -43523,6 +43523,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
         type: 3}
+      propertyPath: kursun_hiz
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
       propertyPath: alev_effect
       value: 
       objectReference: {fileID: 198895463405124220}
