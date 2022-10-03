@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class Game_Manager : MonoBehaviour
     public int bolum_baslangic_parasi;
     public int bolum_gececek_max_dusman;
 
-    public GameObject silah_olustur_cavas, silah_manager_canvas;
+    public TextMeshProUGUI para_text, can_text;
+    public GameObject silah_olustur_cavas, silah_manager_canvas,game_over_canvas;
 
     public GameObject Enemy_1, Enemy_2, Enemy_3, Enemy_4, Enemy_5, Enemy_6, Enemy_7, Enemy_8, Enemy_9;
 
@@ -27,6 +29,20 @@ public class Game_Manager : MonoBehaviour
    public int gecen_dusman;
    
 
+    public void doubletime()
+    {
+        if (Time.timeScale == 1)
+        {
+        Time.timeScale = 2;
+        }
+        else
+        {
+            if (Time.timeScale == 2)
+            {
+                Time.timeScale = 1;
+            }
+        }
+    }
 
     public void para_artir(int gelen_para)
     {
@@ -59,11 +75,15 @@ public class Game_Manager : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {      
+    {
+        can_text.text = gecen_dusman.ToString() + "/" + bolum_gececek_max_dusman.ToString();
+        para_text.text = suanki_para.ToString();
 
-        if (gecen_dusman > bolum_gececek_max_dusman)
+        if (gecen_dusman >= bolum_gececek_max_dusman)
         {
-            Debug.LogError("bitti");
+
+            game_over_canvas.SetActive(true);
+            Time.timeScale = 0;
         }
 
         if (Enemy_1_ds >= Enemy_1_dogum_sayisi)

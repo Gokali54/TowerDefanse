@@ -108,6 +108,8 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "varis_noktasi")
         {
             Destroy(gameObject);
+            
+            game_manager.gecen_dusman++;
         }
 
         if (other.gameObject.tag == "kursun")
