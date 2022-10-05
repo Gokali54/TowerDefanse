@@ -12,6 +12,7 @@ TagManager:
   - kursun
   - silah_olustur_canvas
   - silah_manager_canvas
+  - ben
   layers:
   - Default
   - TransparentFX

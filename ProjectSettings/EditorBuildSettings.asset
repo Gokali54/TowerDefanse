@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main_Menu.unity
+    guid: c03d3bb4ba3156f4fbbc451c6306339b
+  - enabled: 1
+    path: Assets/Scenes/Bolumler.unity
+    guid: fe8744616ab355d479b49bb80cf46ee4
+  - enabled: 1
     path: Assets/Scenes/Map1_Scane.unity
     guid: ac1a5e4c55c918d48ba53d879e5127f2
   - enabled: 1
     path: Assets/Scenes/Map2_Scane.unity
-    guid: 6ff9536c8309baf4dbc65ac63141b4b5
+    guid: cd3cfcdcb3aabee438631721a7f6277a
   m_configObjects: {}
