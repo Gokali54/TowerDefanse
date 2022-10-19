@@ -15,6 +15,8 @@ public class Turret : MonoBehaviour
     public GameObject ust_silah;
     public GameObject silahin_kendisi;
 
+   public GameObject[] kursunlar;
+
     Game_Manager game_Manager;
 
     public float kursun_damage;
@@ -27,7 +29,7 @@ public class Turret : MonoBehaviour
 
 
     bool ates = false;
-    float gelecek_atesi_suresi=0;
+   float gelecek_atesi_suresi=0;
     public List<Transform> hedef;
     public  Transform suanki_hedef;
     GameObject kamera;
@@ -100,10 +102,28 @@ public class Turret : MonoBehaviour
         }
     }
 
+    public void dobuletime()
+    {
+        if (Time.timeScale == 1)
+        {
+            Time.timeScale = 2;
+            Debug.Log("turret time scale" + Time.timeScale.ToString());
+        }
+        else
+        {
+            if (Time.timeScale != 1)
+            {
+                 Debug.Log("turret time scale" + Time.timeScale.ToString());
+                Time.timeScale = 1;
 
+            }
+        }
+    }
 
     void Start()
     {
+        time_sclae = 1;
+        yeni_aralýk = ates_etme_araliði;
         kordinatim = gameObject.transform;
         game_Manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         //   silah_manager_canvas = GameObject.Find("Silah_Manager_Canvas");
@@ -169,9 +189,12 @@ public class Turret : MonoBehaviour
 
        
     }
-
+    public float time_sclae;
+    public float yeni_aralýk;
     void Update()
     {
+        time_sclae = Time.timeScale;
+       
         if (suanki_hedef != null)
         {
             silahin_kafasi.LookAt(suanki_hedef);
@@ -179,7 +202,16 @@ public class Turret : MonoBehaviour
         }
         else
         {
-        silahin_kafasi.Rotate(0, 1, 0);
+            if (Time.timeScale == 1)
+            {
+
+        silahin_kafasi.Rotate(0, 1 , 0);
+            }
+            else
+            {
+        silahin_kafasi.Rotate(0, 4 , 0);
+
+            }
         }
         if (ates == true)
         {            
@@ -187,7 +219,8 @@ public class Turret : MonoBehaviour
             {
              
                 ateset();
-                gelecek_atesi_suresi = Time.time + ates_etme_araliði;
+                yeni_aralýk = ates_etme_araliði / time_sclae;
+                gelecek_atesi_suresi = Time.time + yeni_aralýk;
                 if (alev_effect != null)
                 {                 
                     alev_effect.Play();
@@ -218,6 +251,7 @@ public class Turret : MonoBehaviour
 
        
     }
+
 
     public void ateset()
     {
@@ -254,8 +288,10 @@ public class Turret : MonoBehaviour
     {
         GameObject yeni_kursun = Instantiate(kursun, namlu.position, Quaternion.identity);
         yeni_kursun.transform.LookAt(suanki_hedef);
-        yeni_kursun.GetComponent<Rigidbody>().velocity = namlu.forward * kursun_hiz ;
-        Destroy(yeni_kursun, 1f);
+        //yeni_kursun.GetComponent<Rigidbody>().velocity = namlu.forward * kursun_hiz * Time.deltaTime ;
+       // Destroy(yeni_kursun, 1f);
+        kursun.GetComponent<kursun>().enemy = suanki_hedef;   
+        
     }
 
 }

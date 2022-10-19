@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Game_Manager : MonoBehaviour
@@ -9,10 +11,9 @@ public class Game_Manager : MonoBehaviour
 
     public int bolum_baslangic_parasi;
     public int bolum_gececek_max_dusman;
-
-    public TextMeshProUGUI para_text, can_text;
-    public GameObject silah_olustur_cavas, silah_manager_canvas,game_over_canvas;
-
+    public TextMeshProUGUI para_text, can_text,speed_text;
+    public GameObject silah_olustur_cavas,game_over_canvas,game_start_button,game_pause_panel;
+    GameObject silah_manager_canvas;
     public GameObject Enemy_1, Enemy_2, Enemy_3, Enemy_4, Enemy_5, Enemy_6, Enemy_7, Enemy_8, Enemy_9;
 
     public int Enemy_1_dogum_sayisi, Enemy_2_dogum_sayisi, Enemy_3_dogum_sayisi, Enemy_4_dogum_sayisi, Enemy_5_dogum_sayisi
@@ -28,20 +29,48 @@ public class Game_Manager : MonoBehaviour
    public int suanki_para;
    public int gecen_dusman;
    
+    public void resetscane()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void pause()
+    {
+        Time.timeScale = 0;
+        game_pause_panel.SetActive(true);
+    }
+
+    public void pauseandcountinue()
+    {
+        Time.timeScale = 1;
+        game_pause_panel.SetActive(false);
+    }
+
+    public void quit()
+    {
+        SceneManager.LoadScene("Bolumler");
+    }
 
     public void doubletime()
     {
-        if (Time.timeScale == 1)
+        if (Time.timeScale == 1f)
         {
-        Time.timeScale = 2;
+         Time.timeScale = 2;
+            speed_text.text = "2X";
+            
+
         }
         else
         {
             if (Time.timeScale == 2)
             {
                 Time.timeScale = 1;
+                speed_text.text = "1X";
+              
             }
         }
+
+      
     }
 
     public void para_artir(int gelen_para)
@@ -60,22 +89,13 @@ public class Game_Manager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {               
         suanki_para = bolum_baslangic_parasi;
-        // void adý , ilk komut bekleme süresi , sýklýk
-        InvokeRepeating("Enemy_1_invoke", 2, Enemy_1_dogum_sure);
-        InvokeRepeating("Enemy_2_invoke", 2, Enemy_2_dogum_sure);
-        InvokeRepeating("Enemy_3_invoke", 2, Enemy_3_dogum_sure);
-        InvokeRepeating("Enemy_4_invoke", 2, Enemy_4_dogum_sure);
-        InvokeRepeating("Enemy_5_invoke", 2, Enemy_5_dogum_sure);
-        InvokeRepeating("Enemy_6_invoke", 2, Enemy_6_dogum_sure);
-        InvokeRepeating("Enemy_7_invoke", 2, Enemy_7_dogum_sure);
-        InvokeRepeating("Enemy_8_invoke", 2, Enemy_8_dogum_sure);
-        InvokeRepeating("Enemy_9_invoke", 2, Enemy_9_dogum_sure);
     }
     // Update is called once per frame
     void Update()
     {
+       
         can_text.text = gecen_dusman.ToString() + "/" + bolum_gececek_max_dusman.ToString();
         para_text.text = suanki_para.ToString();
 
@@ -124,8 +144,70 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
+
+    public void game_start()
+    {
+        Time.timeScale = 1;
+        game_start_button.gameObject.SetActive(false);
+       
+        // void adý , ilk komut bekleme süresi , sýklýk
+        if (Enemy_1 != null)
+        {
+          
+            InvokeRepeating("Enemy_1_invoke", 2, Enemy_1_dogum_sure);
+           
+        }
+        if (Enemy_2 != null)
+        {
+           
+            InvokeRepeating("Enemy_2_invoke", 2, Enemy_2_dogum_sure);
+        }
+        if (Enemy_3 != null)
+        {
+          
+            InvokeRepeating("Enemy_3_invoke", 2, Enemy_3_dogum_sure);
+        }
+        if (Enemy_4 != null)
+        {
+            InvokeRepeating("Enemy_4_invoke", 2, Enemy_4_dogum_sure);
+        }
+        if (Enemy_5 != null)
+        {
+            InvokeRepeating("Enemy_5_invoke", 2, Enemy_5_dogum_sure);
+        }
+        if (Enemy_6 != null)
+        {
+            InvokeRepeating("Enemy_6_invoke", 2, Enemy_6_dogum_sure);
+        }
+        if (Enemy_7 != null)
+        {
+            InvokeRepeating("Enemy_7_invoke", 2, Enemy_7_dogum_sure);
+        }
+        if (Enemy_8 != null)
+        {
+            InvokeRepeating("Enemy_8_invoke", 2, Enemy_8_dogum_sure);
+        }
+        if (Enemy_9 != null)
+        {
+            InvokeRepeating("Enemy_9_invoke", 2, Enemy_9_dogum_sure);
+        }
+    }
+
+    public void countinue()
+    {
+        // buraya reklam kodlarý yazýlacak...
+        game_over_canvas.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void Enemy_1_invoke()
     {
+        
         GameObject new_enemy = Instantiate(Enemy_1, dogma_noktasi.position, Quaternion.identity);
         Enemy_1_ds++;
     }

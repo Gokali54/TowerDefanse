@@ -6,12 +6,13 @@ TagManager:
   tags:
   - takip_edilen_kup_2
   - takip_edilen_kup_1
-  - varis_noktasi
-  - radar
-  - Enemy
-  - kursun
   - silah_olustur_canvas
+  - varis_noktasi
   - silah_manager_canvas
+  - radar
+  - kursun
+  - Enemy
+  - turret
   layers:
   - Default
   - TransparentFX

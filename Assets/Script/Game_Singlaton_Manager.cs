@@ -49,6 +49,9 @@ public class Game_Singlaton_Manager :MonoBehaviour
 
     void Update()
     {
-        
+        if (PlayerPrefs.HasKey("diamond"))
+        {
+            diamond = PlayerPrefs.GetInt("diamond");
+        }
     }
 }

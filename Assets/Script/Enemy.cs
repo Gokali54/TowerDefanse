@@ -92,8 +92,16 @@ public class Enemy : MonoBehaviour
       
     }
 
+
+   
+
     private void OnTriggerEnter(Collider other)
     {
+
+        if (other.gameObject.tag == "kursun")
+        {
+            can_azalt(other.gameObject.GetComponent<kursun>().damage);
+        }
        
         if (other.gameObject.tag == "takip_edilen_kup_"+gidecegi_yol.ToString())
         {
@@ -110,12 +118,6 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             
             game_manager.gecen_dusman++;
-        }
-
-        if (other.gameObject.tag == "kursun")
-        {
-          
-            can_azalt(other.gameObject.GetComponent<kursun>().damage);
         }
 
     }
