@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour
     {
         game_manager = GameObject.Find("Game_Manager").GetComponent<Game_Manager>();
         simdiki_can = can;
+        if (game_manager.Enemy_1 != null)
+        {
+
         if (gameObject.name == game_manager.Enemy_1.name + "(Clone)")
         {
             takip_edilen_kup_no = game_manager.Enemy_1_yol;
@@ -38,6 +41,10 @@ public class Enemy : MonoBehaviour
                 gidecegi_yol = 2;
             }
         }
+        }
+        if (game_manager.Enemy_2 != null)
+        {
+
         if (gameObject.name == game_manager.Enemy_2.name + "(Clone)")
         {
             takip_edilen_kup_no = game_manager.Enemy_2_yol;
@@ -47,6 +54,100 @@ public class Enemy : MonoBehaviour
                 gidecegi_yol = 2;
             }
         }
+        }
+        if (game_manager.Enemy_3 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_3.name + "(Clone)")
+        {
+            takip_edilen_kup_no = game_manager.Enemy_3_yol;
+            gidecegi_yol = game_manager.Enemy_3_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+        if (game_manager.Enemy_4 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_4.name + "(Clone)" )
+        {
+            takip_edilen_kup_no = game_manager.Enemy_4_yol;
+            gidecegi_yol = game_manager.Enemy_4_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+        if (game_manager.Enemy_5 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_5.name + "(Clone)")
+        {
+            takip_edilen_kup_no = game_manager.Enemy_5_yol;
+            gidecegi_yol = game_manager.Enemy_5_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+        if (game_manager.Enemy_6 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_6.name + "(Clone)")
+        {
+            takip_edilen_kup_no = game_manager.Enemy_6_yol;
+            gidecegi_yol = game_manager.Enemy_6_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+        if (game_manager.Enemy_7 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_7.name + "(Clone)")
+        {
+            takip_edilen_kup_no = game_manager.Enemy_7_yol;
+            gidecegi_yol = game_manager.Enemy_7_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+        if (game_manager.Enemy_8 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_8.name + "(Clone)")
+        {
+            takip_edilen_kup_no = game_manager.Enemy_8_yol;
+            gidecegi_yol = game_manager.Enemy_8_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+        if (game_manager.Enemy_9 != null)
+        {
+
+        if (gameObject.name == game_manager.Enemy_9.name + "(Clone)")
+        {
+            takip_edilen_kup_no = game_manager.Enemy_9_yol;
+            gidecegi_yol = game_manager.Enemy_9_yol;
+            if (gidecegi_yol != 1)
+            {
+                gidecegi_yol = 2;
+            }
+        }
+        }
+
+
         kamera = GameObject.Find("Main Camera");
       
     }

@@ -73,9 +73,10 @@ public class Bolumler_script : MonoBehaviour
     }
 
 
-    public void Update()
+   public void back()
     {
-        
+
+        SceneManager.LoadScene("Main_Menu");
     }
     public void level2_open()
     {

@@ -22,7 +22,7 @@ public class main_menu : MonoBehaviour
     }
     public void settings()
     {
-        
+        SceneManager.LoadScene("Upgrade"); 
     }
     // Update is called once per frame
     void Update()

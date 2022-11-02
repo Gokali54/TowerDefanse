@@ -43466,6 +43466,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4795219791600268}
     m_Modifications:
+    - target: {fileID: 213249762836044146, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
+      propertyPath: lazer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
         type: 3}
       propertyPath: namlu
@@ -43477,6 +43487,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1000011023395326, guid: 2ce15a1900ef14a459f78260cd05a3dc,
         type: 3}
+    - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
+      propertyPath: turret
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
         type: 3}
       propertyPath: m_Enabled
@@ -43533,6 +43548,16 @@ PrefabInstance:
       propertyPath: silah_manager_canvas
       value: 
       objectReference: {fileID: 7111513719992104280}
+    - target: {fileID: 6152247474312309649, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152247474312309649, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6371048774307489049, guid: c25e192dd89dddc4fa07e2cfe263e49f,
         type: 3}
       propertyPath: m_Name

@@ -860,7 +860,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1675425099}
         m_TargetAssemblyTypeName: main_menu, Assembly-CSharp
-        m_MethodName: deleteee
+        m_MethodName: settings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

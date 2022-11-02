@@ -14617,7 +14617,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4747494351440812}
-  - component: {fileID: 114945165262750342}
   m_Layer: 10
   m_Name: LaserTower_1
   m_TagString: Untagged
@@ -14643,23 +14642,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114945165262750342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839896235219840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d8e55681884ffb9fb6ed0b6f18f0bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerGhostPrefab: {fileID: 114921728373014414, guid: 21ab440aa6ad440439b50d4a44077fba,
-    type: 3}
-  buildEffectPrefab: {fileID: 1395313577031670, guid: c559c1920b5d04e6d83aa4464fba5c68,
-    type: 3}
-  levelData: {fileID: 11400000, guid: 94451cb5b8c4e4c5098e1426401af682, type: 2}
 --- !u!1 &1901571933597918
 GameObject:
   m_ObjectHideFlags: 0
@@ -14672,8 +14654,6 @@ GameObject:
   - component: {fileID: 198388317218217484}
   - component: {fileID: 199576481279877696}
   - component: {fileID: 82533755867068208}
-  - component: {fileID: 114842632765477972}
-  - component: {fileID: 114432560389109378}
   m_Layer: 0
   m_Name: LaserFireEffect
   m_TagString: Untagged
@@ -19454,37 +19434,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114842632765477972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901571933597918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e11f03a17effc4238ba95c5b616ee02c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clips:
-    weightedItems:
-    - clip: {fileID: 8300000, guid: f7f2b958b23574551b561f7e871a8306, type: 3}
-      weight: 1
-  playOnEnabled: 0
---- !u!114 &114432560389109378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901571933597918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f1b3950d58247008c0834d7e945fa91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultParticles: {fileID: 198251088263033146}
-  mobileParticles: {fileID: 198115304560938332}
 --- !u!1 &1915392137110010
 GameObject:
   m_ObjectHideFlags: 0
@@ -38848,6 +38797,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4747494351440812}
     m_Modifications:
+    - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
+        type: 3}
+      propertyPath: lazer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5760400189700553338, guid: c25e192dd89dddc4fa07e2cfe263e49f,
         type: 3}
       propertyPath: namlu

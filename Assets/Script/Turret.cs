@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Turret : MonoBehaviour
 {
+    public bool turret,lazer,rocket;
     public Transform silahin_kafasi, namlu;
 
+
     Transform kordinatim;
+
+       
+     
     // radarý sabitten deðil silahin içine ekledikten sonra sc ye ekle 
     public GameObject radar;
     public GameObject kursun;
@@ -14,7 +20,6 @@ public class Turret : MonoBehaviour
    public GameObject silah_manager_canvas;
     public GameObject ust_silah;
     public GameObject silahin_kendisi;
-
    public GameObject[] kursunlar;
 
     Game_Manager game_Manager;
@@ -122,6 +127,50 @@ public class Turret : MonoBehaviour
 
     void Start()
     {
+        if (turret)
+        {
+            if (PlayerPrefs.HasKey("trt1_lvl"))
+            {              
+                int level = PlayerPrefs.GetInt("trt1_lvl");
+                kursun_damage = kursun_damage + (level * 3 );
+            }
+            if (PlayerPrefs.HasKey("trt_radar"))
+            {
+                int radarlvl = PlayerPrefs.GetInt("trt_radar");
+                radar.transform.localScale += new Vector3(radarlvl, 0, radarlvl);   
+            }
+        }
+
+
+        if (rocket)
+        {
+            if (PlayerPrefs.HasKey("rocket_lvl"))
+            {
+                int level = PlayerPrefs.GetInt("rocket_lvl");
+                kursun_damage = kursun_damage + (level * 3);
+            }
+            if (PlayerPrefs.HasKey("rocket_rdr"))
+            {
+                int radarlvl = PlayerPrefs.GetInt("rocket_rdr");
+                radar.transform.localScale += new Vector3(radarlvl, 0, radarlvl);
+            }
+        }
+        if (lazer)
+        {
+            if (PlayerPrefs.HasKey("lazer_damage"))
+            {
+                int level = PlayerPrefs.GetInt("lazer_damage");
+                kursun_damage = kursun_damage + (level * 3);
+            }
+            if (PlayerPrefs.HasKey("lazer_radar"))
+            {
+                int radarlvl = PlayerPrefs.GetInt("lazer_radar");
+                radar.transform.localScale += new Vector3(radarlvl, 0, radarlvl);
+            }
+        }
+
+
+
         time_sclae = 1;
         yeni_aralýk = ates_etme_araliði;
         kordinatim = gameObject.transform;

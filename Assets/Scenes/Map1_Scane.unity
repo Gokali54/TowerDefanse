@@ -2764,6 +2764,17 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
+      propertyPath: Enemy_3
+      value: 
+      objectReference: {fileID: 9011648103021171507, guid: 8d791e7885d8c11418ff9fcd9552c337,
+        type: 3}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_4
+      value: 
+      objectReference: {fileID: 100720, guid: 8252519d2c6fd014bb5f75765a8c4fda, type: 3}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
       propertyPath: can_text
       value: 
       objectReference: {fileID: 518771728}
@@ -2786,6 +2797,16 @@ PrefabInstance:
         type: 3}
       propertyPath: Enemy_2_yol
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_3_yol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_4_yol
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
@@ -2819,18 +2840,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
+      propertyPath: Enemy_3_dogum_sure
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_4_dogum_sure
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
       propertyPath: silah_olustur_cavas
       value: 
       objectReference: {fileID: 351762291}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
       propertyPath: Enemy_1_dogum_sayisi
-      value: 5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
       propertyPath: Enemy_2_dogum_sayisi
-      value: 50
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_3_dogum_sayisi
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
+        type: 3}
+      propertyPath: Enemy_4_dogum_sayisi
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7656923195983902916, guid: 2c7c6668e379c1a449a43ecdb3ab9aa3,
         type: 3}
@@ -3138,6 +3179,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: game_start
       objectReference: {fileID: 0}
+    - target: {fileID: 5631515939870475363, guid: 64f66a3e5c5ebb24893cce1458e62e56,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5631515939870475423, guid: 64f66a3e5c5ebb24893cce1458e62e56,
         type: 3}
       propertyPath: m_Enabled
@@ -3147,6 +3193,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631515940986928408, guid: 64f66a3e5c5ebb24893cce1458e62e56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631515940986928408, guid: 64f66a3e5c5ebb24893cce1458e62e56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631515940986928408, guid: 64f66a3e5c5ebb24893cce1458e62e56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.29
       objectReference: {fileID: 0}
     - target: {fileID: 8566247908233925673, guid: 64f66a3e5c5ebb24893cce1458e62e56,
         type: 3}
